@@ -3,36 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>8 Elements Counter Game</title>
+    <title>Element Counter Game</title>
     <link rel="stylesheet" href="styles.css">
-    <!-- Link to external JavaScript file -->
-    <script src="script.js"></script>
 </head>
 <body>
-    <div class="game-container">
-        <h1>8 Elements Counter Game</h1>
-        <p>Select an element to counter the random one chosen by the webpage!</p>
-        
-        <button id="start-btn" class="start-btn" onclick="startGame()">Start Game</button>
-        
-        <div class="elements" style="display: none;">
-            <button class="element-btn" onclick="userChoice('Fire')">Fire</button>
-            <button class="element-btn" onclick="userChoice('Water')">Water</button>
-            <button class="element-btn" onclick="userChoice('Earth')">Earth</button>
-            <button class="element-btn" onclick="userChoice('Air')">Air</button>
-            <button class="element-btn" onclick="userChoice('Light')">Light</button>
-            <button class="element-btn" onclick="userChoice('Dark')">Dark</button>
-            <button class="element-btn" onclick="userChoice('Electricity')">Electricity</button>
-            <button class="element-btn" onclick="userChoice('Ice')">Ice</button>
-        </div>
+    <div id="game-container">
+        <h1>Element Counter Game</h1>
+        <button id="start-btn" onclick="startGame()">Start Game</button>
 
-        <div class="random-element">
-            <h3>Random Element: <span id="random-element">-</span></h3>
-        </div>
+        <div id="game-board" style="display: none;">
+            <h2>Choose Your Element</h2>
+            <div class="elements-container">
+                <div class="element-card" onclick="handleUserChoice('Fire')">
+                    <img src="fire.png" alt="Fire">
+                    <p>Fire</p>
+                </div>
+                <div class="element-card" onclick="handleUserChoice('Water')">
+                    <img src="water.png" alt="Water">
+                    <p>Water</p>
+                </div>
+                <div class="element-card" onclick="handleUserChoice('Earth')">
+                    <img src="earth.png" alt="Earth">
+                    <p>Earth</p>
+                </div>
+                <div class="element-card" onclick="handleUserChoice('Air')">
+                    <img src="air.png" alt="Air">
+                    <p>Air</p>
+                </div>
+            </div>
 
-        <div class="result">
+            <h2 id="random-element-title">Random Element:</h2>
+            <div id="random-element" class="element-card">
+                <img src="" alt="Random Element">
+                <p></p>
+            </div>
+
             <h3 id="result"></h3>
         </div>
     </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
