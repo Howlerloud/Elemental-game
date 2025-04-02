@@ -12,9 +12,14 @@ let gameStarted = false;
 let randomElementInterval;
 
 function startGame() {
+    // Hide the start button and show the game board
     document.getElementById('start-btn').style.display = 'none';
     document.getElementById('game-board').style.display = 'block';
+
+    // Set game state to started
     gameStarted = true;
+
+    // Start the random element generator
     randomizeElement();
 }
 
@@ -27,7 +32,7 @@ function randomizeElement() {
 
     // Update the random element in the DOM
     const randomElementCard = document.getElementById('random-element');
-    randomElementCard.querySelector('img').src = `${randomElement.toLowerCase()}.png`;
+    randomElementCard.querySelector('img').src = `${randomElement.toLowerCase()}.png`; // Ensure your image names are lowercase
     randomElementCard.querySelector('p').innerText = randomElement;
 }
 
@@ -40,6 +45,8 @@ function handleUserChoice(element) {
 
 function evaluateGame() {
     const resultElement = document.getElementById('result');
+    
+    // Determine the result based on the user's choice and the random element
     if (userChoice === randomElement) {
         resultElement.innerText = "It's a draw!";
     } else if (counters[userChoice].includes(randomElement)) {
