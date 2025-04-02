@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>8 Elements Counter Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1>8 Elements Counter Game</h1>
+        <p>Select an element to counter the random one chosen by the webpage!</p>
+        
+        <button id="start-btn" class="start-btn" onclick="startGame()">Start Game</button>
+        
+        <div class="elements" style="display: none;">
+            <button class="element-btn" onclick="userChoice('Fire')">Fire</button>
+            <button class="element-btn" onclick="userChoice('Water')">Water</button>
+            <button class="element-btn" onclick="userChoice('Earth')">Earth</button>
+            <button class="element-btn" onclick="userChoice('Air')">Air</button>
+            <button class="element-btn" onclick="userChoice('Light')">Light</button>
+            <button class="element-btn" onclick="userChoice('Dark')">Dark</button>
+            <button class="element-btn" onclick="userChoice('Electricity')">Electricity</button>
+            <button class="element-btn" onclick="userChoice('Ice')">Ice</button>
+        </div>
+
+        <div class="random-element">
+            <h3>Random Element: <span id="random-element">-</span></h3>
+        </div>
+
+        <div class="result">
+            <h3 id="result"></h3>
+        </div>
+    </div>
+
+    <!-- Link to external JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>
