@@ -56,5 +56,12 @@ function evaluateGame() {
     }
 
     // Disable the game after one choice
-    gameStarted = false;
+    gameStarted = false;   
+    
+    // Allow the player to play again by resetting the game
+    setTimeout(() => {
+        document.getElementById('start-btn').style.display = 'inline-block';
+        document.getElementById('game-board').style.display = 'none';
+        document.getElementById('result').innerText = '';
+    }, 2000); // Show "Start Game" button after 2 seconds
 }
