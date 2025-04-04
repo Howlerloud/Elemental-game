@@ -20,7 +20,7 @@ function startGame() {
     gameStarted = true;
 
     // Start the random element generator with an interval
-    randomElementInterval = setInterval(randomizeElement, 1000); // Change element every second
+    randomElementInterval = setInterval(randomizeElement, 3000); // Change element every second
 }
 
 function randomizeElement() {
