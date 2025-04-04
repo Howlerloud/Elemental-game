@@ -4,33 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Element Counter Game</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css\styles.css">
 </head>
 <body>
     <div id="game-container">
-        <h1>Element Counter Game</h1>
+        <h1>Into The Vortex</h1>
         <button id="start-btn" onclick="startGame()">Start Game</button>
 
         <div id="game-board" style="display: none;">
             <h2>Choose Your Element</h2>
             <div class="elements-container">
-                <div class="element-card" onclick="handleUserChoice('Fire')">
-                    <img src="fire.png" alt="Fire">
+                <div class="element-card" data-element="Fire" onclick="handleUserChoice('Fire')">
+                    <img src="assets\fire.webp" alt="Fire">
                     <p>Fire</p>
                 </div>
-                <div class="element-card" onclick="handleUserChoice('Water')">
-                    <img src="water.png" alt="Water">
+                <div class="element-card" data-element="Water" onclick="handleUserChoice('Water')">
+                    <img src="assets\water.webp" alt="Water">
                     <p>Water</p>
                 </div>
-                <div class="element-card" onclick="handleUserChoice('Earth')">
-                    <img src="earth.png" alt="Earth">
+                <div class="element-card" data-element="Earth" onclick="handleUserChoice('Earth')">
+                    <img src="assets\earth.webp" alt="Earth">
                     <p>Earth</p>
                 </div>
-                <div class="element-card" onclick="handleUserChoice('Air')">
-                    <img src="air.png" alt="Air">
+                <div class="element-card" data-element="Air" onclick="handleUserChoice('Air')">
+                    <img src="assets\air.webp" alt="Air">
                     <p>Air</p>
                 </div>
-            </div>
 
             <h2 id="random-element-title">Random Element:</h2>
             <div id="random-element" class="element-card">
@@ -42,6 +41,6 @@
         </div>
     </div>
 
-    <script src="script.js"></script>
+    <script src="java\script.js"></script>
 </body>
 </html>
