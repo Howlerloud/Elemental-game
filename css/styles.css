@@ -70,13 +70,12 @@ button:hover {
     padding: 20px;
     border: 2px solid #ccc;
     border-radius: 10px;
-    background-color: ##0e1018;
+    background-color: #0e1018;
     text-align: center;
 }
 
-
 #result {
     margin-top: 20px;
-    font-size: 18px;
+    font-size: 2rem;
     font-weight: bold;
 }
