@@ -50,7 +50,7 @@ button:hover {
     width: 250px;
     height: 250px;
     cursor: pointer;
-    background-color: white;
+    background-color: #0e1018;
     text-align: center;
     transition: transform 0.3s ease;
 }
@@ -70,7 +70,7 @@ button:hover {
     padding: 20px;
     border: 2px solid #ccc;
     border-radius: 10px;
-    background-color: #e7e7e7;
+    background-color: ##0e1018;
     text-align: center;
 }
 
