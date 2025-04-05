@@ -1,11 +1,11 @@
 const elements = ['Fire', 'Water', 'Earth', 'Wind','Ice','Thunder'];
 const counters = {
-    Fire: ['Water'],
-    Ice: ['Fire'],
-    Wind: ['Ice'],
-    Earth: ['Wind'],
-    Thunder:['Earth'],
-    Water: ['Thunder'],
+    Fire: ['Ice'],
+    Ice: ['Wind'],
+    Wind: ['Earth'],
+    Earth: ['Thunder'],
+    Thunder:['Water'],
+    Water: ['Fire'],
 };
 
 let randomElement = '';
