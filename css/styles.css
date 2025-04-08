@@ -142,10 +142,6 @@ body {
 
 }
 
-#counter-list {
-    width: 100%;
-}
-
 @media screen and (max-width: 760px) {
 html {
     /*Image by -https://uk.pinterest.com/pin/284500901447091730/ */
@@ -194,5 +190,10 @@ body {
     font-size: 1rem;
     padding-top: 0.5rem;
 }
+
+#counter-list {
+    width: 80%;
+}
+
 
 }
