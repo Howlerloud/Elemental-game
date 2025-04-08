@@ -190,4 +190,9 @@ body {
     bottom: 1rem;
 }
 
+#random-element-title {
+    font-size: 1rem;
+    padding-top: 0.5rem;
+}
+
 }
