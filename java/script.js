@@ -12,15 +12,17 @@ let randomElement = '';
 let userChoice = '';
 let gameStarted = false;
 let randomElementInterval;
-let countdown = 15;
+let countdown = 30;
 let timerInterval;
 let selectedElements = []; // Store selected elements
 let correctSelections = 0; // Count correct selections
 let defeatedCount = 0; // Track the number of defeated random elements
+let defeatedElements = []; // Track the defeated random elements
 
 function startGame() {
-    // Hide the start button and show the game board
+    // Hide the start button, counters and show the game board
     document.getElementById('start-btn').style.display = 'none';
+    document.getElementById('element-counters').style.display = 'none';
     document.getElementById('game-board').style.display = 'block';
 
     // Set game state to started
@@ -30,7 +32,7 @@ function startGame() {
     randomElementInterval = setInterval(randomizeElement, 3000);
 
     // Start the countdown after a 3-second delay
-    countdown = 30;
+    countdown = 600;
     document.getElementById('timer').innerText = `Time Remaining: ${countdown}s`;
 
     // Delay starting the countdown for 3 seconds
@@ -54,15 +56,24 @@ function updateTimer() {
 function randomizeElement() {
     if (!gameStarted) return;
 
-    // Select a random element
-    const randomIndex = Math.floor(Math.random() * elements.length);
-    randomElement = elements[randomIndex];
+    // Filter out defeated elements from the available elements
+    const availableElements = elements.filter(element => !defeatedElements.includes(element));
+
+    // If all elements are defeated, end the game
+    if (availableElements.length === 0) {
+        evaluateGame(true);
+        return;
+    }
+
+    // Generate a random element from the available elements
+    const randomIndex = Math.floor(Math.random() * availableElements.length);
+    randomElement = availableElements[randomIndex];
 
     // Find the corresponding image for the random element
     const randomElementCard = document.querySelector(`.element-card[data-element="${randomElement}"]`);
     const imgSrc = randomElementCard.querySelector('img').src;
 
-    // Update the random element in the with the image and name
+    // Update the random element in the display with the image and name
     const randomElementDisplay = document.getElementById('random-element');
     randomElementDisplay.querySelector('img').src = imgSrc;
     randomElementDisplay.querySelector('p').innerText = randomElement;
@@ -85,6 +96,9 @@ function handleUserChoice(element) {
         defeatRandomElement(); // "Defeat" the random element if the user selects correctly
         defeatedCount++; // Increment the defeated count
 
+        // Add the defeated element to the defeatedElements list
+        defeatedElements.push(randomElement);
+
         // If all elements are selected correctly and defeated, evaluate the game
         if (defeatedCount === 6) {
             setTimeout(() => evaluateGame(true), 500); // Delay evaluation until all selections are made
@@ -93,6 +107,12 @@ function handleUserChoice(element) {
         // If the user chooses incorrectly, end the game
         evaluateGame(false); // Pass `false` to indicate defeat
     }
+}
+
+function defeatRandomElement() {
+    // After a correct selection, mark the random element as defeated
+    // and prevent it from appearing again in future randomizations
+    defeatedElements.push(randomElement);
 }
 
 function evaluateGame(isWin) {
@@ -106,7 +126,7 @@ function evaluateGame(isWin) {
     if (isWin) {
         resultElement.innerText = "You Win! You defeated all the random elements!";
     } else {
-        resultElement.innerText = "You have been defeated my the Monsters!";
+        resultElement.innerText = "You have been defeated by the Monsters!";
     }
 
     // Disable the game after one choice
@@ -133,6 +153,7 @@ function resetGame() {
     selectedElements = [];
     correctSelections = 0;
     defeatedCount = 0; // Reset defeated elements count
+    defeatedElements = []; // Reset defeated elements list
 
     // Reset all cards to their initial state
     const cards = document.querySelectorAll('.element-card');

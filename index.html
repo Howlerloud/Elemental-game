@@ -1,57 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Element Counter Game</title>
-    <link rel="stylesheet" href="css/styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Element Counter Game</title>
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <!-- All images used credit- https://finalfantasy.fandom.com/wiki/Final_Fantasy_XI_enemies -->
+
 <body>
-    <div id="game-container">
-        <h1>Into The Vortex</h1>
-        <button id="start-btn" onclick="startGame()">Start Game</button>
-        <div id="game-board" style="display: none;">
-            <h2>Choose Your Element</h2>
-            <h3 id="timer">Time Remaining: 30s</h3>
-            <div class="elements-container">
-                <div class="element-card" data-element="Fire" onclick="handleUserChoice('Fire')">
-                    <img src="assets/fire.webp" alt="Fire">
-                    <p>Fire</p>
-                </div>
-                <div class="element-card" data-element="Water" onclick="handleUserChoice('Water')">
-                    <img src="assets/water.webp" alt="Water">
-                    <p>Water</p>
-                </div>
-                <div class="element-card" data-element="Earth" onclick="handleUserChoice('Earth')">
-                    <img src="assets/earth.webp" alt="Earth">
-                    <p>Earth</p>
-                </div>
-                <div class="element-card" data-element="Wind" onclick="handleUserChoice('Wind')">
-                    <img src="assets/Wind.webp" alt="Wind">
-                    <p>Wind</p>
-                </div>
-                <div class="element-card" data-element="Thunder" onclick="handleUserChoice('Thunder')">
-                    <img src="assets/Thunder.webp" alt="Thunder">
-                    <p>Thunder</p>
-                </div>
-                <div class="element-card" data-element="Ice" onclick="handleUserChoice('Ice')">
-                    <img src="assets/Ice.webp" alt="Ice">
-                    <p>Ice</p>
-                </div>
-                <div id="section">
-                    <h2 id="random-element-title">Watch out, here come the elemental monsters!!!</h2>
-                        <div id="random-element" class="element-card">
-                            <img src="assets/Bomb.webp" alt="Random Element">
-                            <p></p>
-                        </div>
-                </div>
-            </div>
-
-            <h3 id="result"></h3>
-        </div>
+  <div id="game-container">
+    <h1>Into The Vortex</h1>
+    <button id="start-btn" onclick="startGame()">Start Game</button>
+    <div id="element-counters">
+      <h2>Study closely, it might save your life in the dungeon!</h2>
+      <img src="assets\Counters.webp"
+        alt="A list of of what elements counter another element. Fire beats Ice, Ice beats Wind, Wind beats Earth, Earth beats Thunder, Thunder beats Water, Water beats Fire.">
     </div>
+    <div>
+      <div id="game-board" style="display: none;">
+        <h2>Choose Your Elemental Monster!</h2>
+        <h3 id="timer">Time Remaining: 30s</h3>
+        <div class="elements-container">
+          <div class="element-card" data-element="Fire" onclick="handleUserChoice('Fire')">
+            <img src="assets/fire.webp" alt="Fire">
+            <p>Fire</p>
+          </div>
+          <div class="element-card" data-element="Water" onclick="handleUserChoice('Water')">
+            <img src="assets/water.webp" alt="Water">
+            <p>Water</p>
+          </div>
+          <div class="element-card" data-element="Earth" onclick="handleUserChoice('Earth')">
+            <img src="assets/earth.webp" alt="Earth">
+            <p>Earth</p>
+          </div>
+          <div class="element-card" data-element="Wind" onclick="handleUserChoice('Wind')">
+            <img src="assets/Wind.webp" alt="Wind">
+            <p>Wind</p>
+          </div>
+          <div class="element-card" data-element="Thunder" onclick="handleUserChoice('Thunder')">
+            <img src="assets/Thunder.webp" alt="Thunder">
+            <p>Thunder</p>
+          </div>
+          <div class="element-card" data-element="Ice" onclick="handleUserChoice('Ice')">
+            <img src="assets/Ice.webp" alt="Ice">
+            <p>Ice</p>
+          </div>
+          <div id="section">
+            <h2 id="random-element-title">Watch out, here come the elemental monsters!!!</h2>
+            <div id="random-element" class="element-card">
+              <img src="assets/Bomb.webp" alt="Random Element">
+              <p></p>
+            </div>
+          </div>
+        </div>
+      </div>
 
-    <script src="java/script.js"></script>
+      <h3 id="result"></h3>
+    </div>
+  </div>
+
+  <script src="java/script.js"></script>
 </body>
-</html>
