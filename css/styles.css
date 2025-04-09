@@ -7,8 +7,8 @@ html {
 body {
     font-family: Arial, sans-serif;
     text-align: center;
-    padding: 20px;
     color: #ccc;
+    padding: 20px;
 }
 
 #game-container {
@@ -54,13 +54,14 @@ button:hover {
     background-color: #0e1018;
     text-align: center;
     transition: transform 0.3s ease;
-    transform-style: preserve-3d; /* For 3D effect */
+    transform-style: preserve-3d;
 }
 
+/* Prevent image from showing during flip */
 .element-card img {
     width: 100%;
     height: 80%;
-    backface-visibility: hidden; /* Prevent image from showing during flip */
+    backface-visibility: hidden; 
 }
 
 .element-card p {
@@ -132,7 +133,7 @@ body {
     background-color: #0e1018;
     text-align: center;
     transition: transform 0.3s ease;
-    transform-style: preserve-3d; /* For 3D effect */
+    transform-style: preserve-3d; 
 }
 
 #section {
@@ -178,7 +179,7 @@ body {
     background-color: #0e1018;
     text-align: center;
     transition: transform 0.3s ease;
-    transform-style: preserve-3d; /* For 3D effect */
+    transform-style: preserve-3d;
 }
 
 #section {
