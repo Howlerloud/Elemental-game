@@ -34,7 +34,7 @@ function startGame() {
     // 30 Second countdown
     countdown = 30;
     document.getElementById("timer").innerText =
-     "Time Remaining: ${countdown}s";
+     `Time Remaining: ${countdown}s`;
 
     // Delay starting the countdown for 3 seconds
     setdelay(() => {
