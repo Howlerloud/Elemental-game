@@ -19,11 +19,81 @@ let correctSelections = 0; // Count correct selections
 let defeatedCount = 0; // Track the number of defeated random elements
 let defeatedElements = []; // Track the defeated random elements
 
-function startGame() {
+function difficulty () {
+    // Hide the start button, counters and show the game board
+    document.getElementById("start-button").style.display = "none";
+    document.getElementById("element-counters").style.display = "none";
+    document.getElementById("easy").style.display ="inline-block";
+    document.getElementById("medium").style.display ="inline-block";
+    document.getElementById("hard").style.display ="inline-block";
+}
+
+function startGameEasy() {
     // Hide the start button, counters and show the game board
     document.getElementById("start-button").style.display = "none";
     document.getElementById("element-counters").style.display = "none";
     document.getElementById("game-board").style.display = "block";
+
+    //Hide difficulty buttons
+    document.getElementById("easy").style.display ="none";
+    document.getElementById("medium").style.display ="none";
+    document.getElementById("hard").style.display ="none";
+
+    // Set game state to started
+    gameStarted = true;
+
+    // Start the random element generator with an interval
+    randomElementInterval = setInterval(randomizeElement, 3000);
+
+    // 30 Second countdown
+    countdown = 60;
+    document.getElementById("timer").innerText =
+     `Time Remaining: ${countdown}s`;
+
+    // Delay starting the countdown for 3 seconds
+    setTimeout(() => {
+        timerInterval = setInterval(updateTimer, 1000);
+    }, 3000);
+}
+
+function startGameMedium() {
+    // Hide the start button, counters and show the game board
+    document.getElementById("start-button").style.display = "none";
+    document.getElementById("element-counters").style.display = "none";
+    document.getElementById("game-board").style.display = "block";
+
+    //Hide difficulty buttons
+    document.getElementById("easy").style.display ="none";
+    document.getElementById("medium").style.display ="none";
+    document.getElementById("hard").style.display ="none";
+
+    // Set game state to started
+    gameStarted = true;
+
+    // Start the random element generator with an interval
+    randomElementInterval = setInterval(randomizeElement, 3000);
+
+    // 30 Second countdown
+    countdown = 45;
+    document.getElementById("timer").innerText =
+     `Time Remaining: ${countdown}s`;
+
+    // Delay starting the countdown for 3 seconds
+    setTimeout(() => {
+        timerInterval = setInterval(updateTimer, 1000);
+    }, 3000);
+}
+
+function startGameHard() {
+    // Hide the start button, counters and show the game board
+    document.getElementById("start-button").style.display = "none";
+    document.getElementById("element-counters").style.display = "none";
+    document.getElementById("game-board").style.display = "block";
+
+    //Hide difficulty buttons
+    document.getElementById("easy").style.display ="none";
+    document.getElementById("medium").style.display ="none";
+    document.getElementById("hard").style.display ="none";
 
     // Set game state to started
     gameStarted = true;
@@ -37,8 +107,7 @@ function startGame() {
      `Time Remaining: ${countdown}s`;
 
     // Delay starting the countdown for 3 seconds
-    setdelay(() => {
-        // Start updating the timer every second after the 3-second delay
+    setTimeout(() => {
         timerInterval = setInterval(updateTimer, 1000);
     }, 3000);
 }
@@ -50,11 +119,12 @@ function updateTimer() {
         document.getElementById("result").innerText =
          "Time's up!";
     } else {
-        countdown--;
+        Math.floor(countdown--);
         document.getElementById("timer").innerText =
          `Time Remaining: ${countdown}s`;
     }
 }
+
 
 function randomizeElement() {
     if (!gameStarted) return;
@@ -95,7 +165,7 @@ function handleUserChoice(element) {
     // Flip the card and disable it
     const card =
      document.querySelector(`.element-card[data-element="${element}"]`);
-    card.style.transform = "rotateY(180deg)"; // Flips card
+    card.style.transform = "rotateY(90deg)"; // Rotates card so its hidden
     card.style.pointerEvents = "none"; // Disable further interaction
 
     // Store selected element
@@ -114,7 +184,7 @@ function handleUserChoice(element) {
         if (defeatedCount === 6) {
 
              // Delay evaluation until all selections are made
-            setDelay(() => evaluateGame(true), 500);
+             setTimeout(() => evaluateGame(true), 500);
         }
     } else {
         // If the user chooses incorrectly, end the game
@@ -146,7 +216,7 @@ function evaluateGame(Win) {
          "You have been defeated by the Monsters!";
     }
 
-    // Disable the game after one choice
+    // Disable the game
     gameStarted = false;
 
     // Disable further interaction with elements
@@ -158,7 +228,7 @@ function evaluateGame(Win) {
     });
 
     // Allow the player to play again by resetting the game
-    setDelay(() => {
+    setTimeout(() => {
         document.getElementById("start-button").style.display =
          "inline-block";
         document.getElementById("element-counters").style.display =
