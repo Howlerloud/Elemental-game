@@ -34,10 +34,10 @@ function startGame() {
     // 30 Second countdown
     countdown = 30;
     document.getElementById("timer").innerText =
-     "Time Remaining: ${countdown}s";
+     `Time Remaining: ${countdown}s`;
 
     // Delay starting the countdown for 3 seconds
-    setdelay(() => {
+    setInterval(() => {
         // Start updating the timer every second after the 3-second delay
         timerInterval = setInterval(updateTimer, 1000);
     }, 3000);
@@ -114,7 +114,7 @@ function handleUserChoice(element) {
         if (defeatedCount === 6) {
 
              // Delay evaluation until all selections are made
-            setDelay(() => evaluateGame(true), 500);
+            setInterval(() => evaluateGame(true), 500);
         }
     } else {
         // If the user chooses incorrectly, end the game
@@ -158,7 +158,7 @@ function evaluateGame(Win) {
     });
 
     // Allow the player to play again by resetting the game
-    setDelay(() => {
+    setInterval(() => {
         document.getElementById("start-button").style.display =
          "inline-block";
         document.getElementById("element-counters").style.display =
