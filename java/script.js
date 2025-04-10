@@ -12,7 +12,7 @@ let randomElement = "";
 let userChoice = "";
 let gameStarted = false;
 let randomElementInterval;
-let countdown = 30; // Countdown timer
+let timeLeft = 30; // Countdown timer
 let timerInterval;
 let selectedElements = []; // Store selected elements
 let correctSelections = 0; // Count correct selections
@@ -29,30 +29,30 @@ function startGame() {
     gameStarted = true;
 
     // Start the random element generator with an interval
-    randomElementInterval = setInterval(randomizeElement, 3000);
+    randomElementInterval = setTimeout(randomizeElement, 3000);
 
     // 30 Second countdown
-    countdown = 30;
+    timeLeft = 30;
     document.getElementById("timer").innerText =
-     `Time Remaining: ${countdown}s`;
+     `Time Remaining: ${timeLeft}s`;
 
-    // Delay starting the countdown for 3 seconds
-    setdelay(() => {
-        // Start updating the timer every second after the 3-second delay
-        timerInterval = setInterval(updateTimer, 1000);
-    }, 3000);
+ // Delay starting the countdown for 3 seconds
+ setTimeout(() => {
+    // Start updating the timer every second after the 3-second delay
+    timerInterval = setInterval(updateTimer, 1000);
+}, 3000);
 }
 
 function updateTimer() {
-    if (countdown <= 0) {
+    if (timeLeft <= 0) {
         clearInterval(timerInterval); // Stop the timer when it reaches 0
         evaluateGame(); // Automatically evaluate the game when time is up
         document.getElementById("result").innerText =
          "Time's up!";
     } else {
-        countdown--;
+        timeLeft--;
         document.getElementById("timer").innerText =
-         `Time Remaining: ${countdown}s`;
+         `Time Remaining: ${timeLeft}s`;
     }
 }
 
@@ -114,7 +114,7 @@ function handleUserChoice(element) {
         if (defeatedCount === 6) {
 
              // Delay evaluation until all selections are made
-            setDelay(() => evaluateGame(true), 500);
+            setTimeout(() => evaluateGame(true), 500);
         }
     } else {
         // If the user chooses incorrectly, end the game
@@ -158,7 +158,7 @@ function evaluateGame(Win) {
     });
 
     // Allow the player to play again by resetting the game
-    setDelay(() => {
+    setTimeout(() => {
         document.getElementById("start-button").style.display =
          "inline-block";
         document.getElementById("element-counters").style.display =
