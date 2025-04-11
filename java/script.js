@@ -165,7 +165,7 @@ function handleUserChoice(element) {
     // Flip the card and disable it
     const card =
      document.querySelector(`.element-card[data-element="${element}"]`);
-    card.style.transform = "rotateY(90deg)"; // Rotates card so its hidden
+    card.style.transform = "rotateY(90deg) rotateX(90deg)"; // Rotates card so its hidden
     card.style.pointerEvents = "none"; // Disable further interaction
 
     // Store selected element
