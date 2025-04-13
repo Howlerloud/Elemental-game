@@ -9,10 +9,10 @@ const counters = {
     Wind: ["Earth"]
 };
 
-let randomElement = "";
-let userChoice = "";
-let gameState = false; // if the game is running or not
-let randomElementInterval;
+let randomElement = "";  // array to store random element
+let userChoice = ""; //
+let gameStart = false; // if the game is running or not
+let selectElement;
 let countdown = 30; // Countdown timer.
 let timerInterval;
 let selectedElements = []; // Store selected elements.
@@ -32,17 +32,15 @@ function difficulty() {
 function startGameEasy() {
     // Hide the difficulty choices and starts the game.
     document.getElementById("game-board").style.display = "block";
-
-    //Hide difficulty buttons
     document.getElementById("easy").style.display = "none";
     document.getElementById("medium").style.display = "none";
     document.getElementById("hard").style.display = "none";
 
     // Set game state to started
-    gameState = true;
+    gameStart = true;
 
     // Start the random monster generator with an interval of 3 seconds
-    randomElementInterval = setInterval(randomizeElement, 3000);
+    selectElement = setInterval(randomizeElement, 3000);
 
     // 60 Second countdown timer
     countdown = 60;
@@ -65,10 +63,10 @@ function startGameMedium() {
     document.getElementById("hard").style.display = "none";
 
     // Set game state to started
-    gameState = true;
+    gameStart = true;
 
     // Start the random monster generator with an interval of 3 seconds
-    randomElementInterval = setInterval(randomizeElement, 3000);
+    selectElement = setInterval(randomizeElement, 3000);
 
     // 45 Second countdown timer
     countdown = 45;
@@ -91,10 +89,10 @@ function startGameHard() {
     document.getElementById("hard").style.display = "none";
 
     // Set game state to started
-    gameState = true;
+    gameStart = true;
 
-    // Start the random monster generator with an interval of 3 seconds
-    randomElementInterval = setInterval(randomizeElement, 3000);
+    // Start the random monster generator with an interval of 2 seconds
+    selectElement = setInterval(randomizeElement, 2000);
 
     // 30 Second countdown timer
     countdown = 30;
@@ -157,20 +155,21 @@ function randomizeElement() {
 
 function handleUserChoice(element) {
     // Removes the chosen element card from the list
-    if (!gameState ||
+    if (!gameStart ||
         selectedElements.includes(element)) { return; }
     // Flips the card and disables it from play
     const card =
         document.querySelector(`.element-card[data-element="${element}"]`);
     // Rotates card so its hidden
-    card.style.transform = "rotateY(90deg) rotateX(90deg)";
+    card.style.transform = "rotateY(180deg) rotateX(180deg)";
     card.style.pointerEvents = "none"; // Disable further interaction
 
     // Store selected element into the element array
     selectedElements.push(element);
 
-    // Check if the user's choice is correct
+    // Check if the player has chosen correctly
     if (counters[element].includes(randomElement)) {
+        //Adds 1 every time a correct element is chosen
         correctSelections = correctSelections + 1;
         // "Defeat" the random element if the user selects correctly
         defeatRandomMonster();
@@ -180,7 +179,6 @@ function handleUserChoice(element) {
         defeatedElements.push(randomElement);
         // Evaluate the game
         if (defeatedCount === 6) {
-
             // Delay evaluation until all selections are made
             setTimeout(() => evaluateGame(true), 500);
         }
@@ -201,7 +199,7 @@ function evaluateGame(Win) {
         document.getElementById("result");
 
     // Stop the random element interval after user makes a choice
-    clearInterval(randomElementInterval);
+    clearInterval(selectElement);
 
     // Stop the countdown timer
     clearInterval(timerInterval);
@@ -215,7 +213,7 @@ function evaluateGame(Win) {
     }
 
     // Disable the game
-    gameState = false;
+    gameStart = false;
 
     // Disable further interaction with elements
     const cards = document.querySelectorAll(".element-card");
@@ -236,7 +234,7 @@ function evaluateGame(Win) {
         document.getElementById("result").innerText =
             "";
         document.getElementById("timer").innerText =
-            "Time Remaining: 30s"; // Reset timer display
+            ""; // Reset timer display
         resetGame(); // Reset the game
     }, 3000);
 }
