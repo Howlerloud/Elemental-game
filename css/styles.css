@@ -1,7 +1,7 @@
 html {
     background-color: #f4f4f4;
     /*Image by -https://www.facebook.com/OfficialOldSchoolRuneScape/photos/what-do-you-think-about-this-re-imagining-of-the-old-school-login-screen-it-was-/1006470002856164/?_rdr */
-    background-image: url(../assets/dungeon.jpg);
+    background-image: url(../assets/images/dungeon.jpg);
     background-size: 1920px 1080px;
 }
 body {
@@ -111,7 +111,7 @@ button:hover {
        screen and (max-height: 880px) {
 html {
     /*Image by -https://uk.pinterest.com/pin/284500901447091730/ */
-    background-image: url(../assets/dungeon-mobile.jpg);
+    background-image: url(../assets/images/dungeon-mobile.jpg);
     background-size: 1700px 2500px;
 }
 body {
@@ -157,7 +157,7 @@ body {
 @media screen and (max-width: 760px) {
 html {
     /*Image by -https://uk.pinterest.com/pin/284500901447091730/ */
-    background-image: url(../assets/dungeon-mobile.jpg);
+    background-image: url(../assets/images/dungeon-mobile.jpg);
     background-size: 1700px 2500px;
 }
 body {
