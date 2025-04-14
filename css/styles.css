@@ -84,7 +84,7 @@ button:hover {
 }
 
 .element-card.flipped {
-    transform: rotateY(180deg);
+    transform: ;
 }
 
 #random-element {

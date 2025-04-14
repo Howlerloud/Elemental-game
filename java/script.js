@@ -161,7 +161,7 @@ function handleUserChoice(element) {
     const card =
         document.querySelector(`.element-card[data-element="${element}"]`);
     // Rotates card so its hidden
-    card.style.transform = "rotateY(180deg) rotateX(180deg)";
+    card.style.transform = "rotateY(90deg) rotateX(90deg)";
     card.style.pointerEvents = "none"; // Disable further interaction
 
     // Store selected element into the element array
@@ -223,7 +223,7 @@ function evaluateGame(Win) {
         card.style.pointerEvents = "none";
     });
 
-    // Allow the player to play again by resetting the game
+    // Resets the game back to the start menu
     setTimeout(function() {
         document.getElementById("start-button").style.display =
             "inline-block";
