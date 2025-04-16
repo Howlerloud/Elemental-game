@@ -9,19 +9,11 @@ const counters = {
     Wind: ["Earth"]
 };
 
-<<<<<<< HEAD
-let randomElement = "";
-let userChoice = "";
-let gameStarted = false;
-let randomElementInterval;
-let timeLeft = 30; // Countdown timer
-=======
 let randomElement = "";  // array to store random element
 let userChoice = ""; //
 let gameStart = false; // if the game is running or not
 let selectElement;
 let countdown = 30; // Countdown timer.
->>>>>>> ba4fcdfc3dd382c672f946e347bfdee33bf10eb4
 let timerInterval;
 let selectedElements = []; // Store selected elements.
 let correctSelections = 0; // Count correct selections.
@@ -47,21 +39,6 @@ function startGameEasy() {
     // Set game state to started
     gameStart = true;
 
-<<<<<<< HEAD
-    // Start the random element generator with an interval
-    randomElementInterval = setTimeout(randomizeElement, 3000);
-
-    // 30 Second countdown
-    timeLeft = 30;
-    document.getElementById("timer").innerText =
-     `Time Remaining: ${timeLeft}s`;
-
- // Delay starting the countdown for 3 seconds
- setTimeout(() => {
-    // Start updating the timer every second after the 3-second delay
-    timerInterval = setInterval(updateTimer, 1000);
-}, 3000);
-=======
     // Start the random monster generator with an interval of 3 seconds
     selectElement = setInterval(randomizeElement, 3000);
 
@@ -126,7 +103,6 @@ function startGameHard() {
     setTimeout(function() {
         timerInterval = setInterval(updateTimer, 1000);
     }, 3000);
->>>>>>> ba4fcdfc3dd382c672f946e347bfdee33bf10eb4
 }
 
 function updateTimer() {
@@ -136,16 +112,10 @@ function updateTimer() {
         document.getElementById("result").innerText =
             "Time's up!";
     } else {
-<<<<<<< HEAD
-        timeLeft--;
-        document.getElementById("timer").innerText =
-         `Time Remaining: ${timeLeft}s`;
-=======
         countdown = countdown - 1;
         Math.floor(countdown);
         document.getElementById("timer").innerText =
             `Time Remaining: ${countdown}s`;
->>>>>>> ba4fcdfc3dd382c672f946e347bfdee33bf10eb4
     }
 }
 
@@ -209,12 +179,7 @@ function handleUserChoice(element) {
         defeatedElements.push(randomElement);
         // Evaluate the game
         if (defeatedCount === 6) {
-<<<<<<< HEAD
-
-             // Delay evaluation until all selections are made
-=======
             // Delay evaluation until all selections are made
->>>>>>> ba4fcdfc3dd382c672f946e347bfdee33bf10eb4
             setTimeout(() => evaluateGame(true), 500);
         }
     } else {
@@ -258,13 +223,8 @@ function evaluateGame(Win) {
         card.style.pointerEvents = "none";
     });
 
-<<<<<<< HEAD
-    // Allow the player to play again by resetting the game
-    setTimeout(() => {
-=======
     // Resets the game back to the start menu
     setTimeout(function() {
->>>>>>> ba4fcdfc3dd382c672f946e347bfdee33bf10eb4
         document.getElementById("start-button").style.display =
             "inline-block";
         document.getElementById("element-counters").style.display =
