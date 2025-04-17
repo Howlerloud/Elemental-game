@@ -27,6 +27,7 @@ function difficulty() {
     document.getElementById("easy").style.display = "inline-block";
     document.getElementById("medium").style.display = "inline-block";
     document.getElementById("hard").style.display = "inline-block";
+    document.getElementById("instructions").style.display = "none";
 }
 
 function startGameEasy() {
@@ -235,6 +236,8 @@ function evaluateGame(Win) {
             "";
         document.getElementById("timer").innerText =
             ""; // Reset timer display
+            document.getElementById("instructions").style.display 
+            = "inline-block";
         resetGame(); // Reset the game
     }, 3000);
 }
@@ -261,4 +264,17 @@ function resetGame() {
     randomElementDisplay.querySelector("img").src =
         "assets/Bomb.webp"; // Reset to the original random element image
     randomElementDisplay.querySelector("p").innerText = ""; // Reset text
+}
+
+function manual() {
+    Swal.fire(
+         "How to play",
+         `There are 6 known monsters down in the dungeon
+          and we have given you the needed summoning magic
+           to fend off these beasts. All 6 monsters are weak
+            to 1 element type for example fire is put out by
+             water and thunder can decimate water but be quick
+              the monsters will quickly attack and run so you
+               only get a few seconds to react`
+      );
 }
