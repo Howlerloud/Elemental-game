@@ -1,4 +1,5 @@
 /*jslint browser */
+/*global Swal */
 const elementals = ["Fire", "Water", "Earth", "Wind", "Ice", "Thunder"];
 const counters = {
     Earth: ["Thunder"],
@@ -236,7 +237,7 @@ function evaluateGame(Win) {
             "";
         document.getElementById("timer").innerText =
             ""; // Reset timer display
-            document.getElementById("instructions").style.display 
+        document.getElementById("instructions").style.display
             = "inline-block";
         resetGame(); // Reset the game
     }, 3000);
