@@ -11,7 +11,6 @@ const counters = {
 };
 
 let randomElement = "";  // array to store random element
-let userChoice = ""; //
 let gameStart = false; // if the game is running or not
 let selectElement;
 let countDown = 30; // Countdown timer.
@@ -191,8 +190,8 @@ function handleUserChoice(element) {
 }
 
 function defeatRandomMonster() {
-    // After a correct selection, mark the random element as defeated
-    // and prevent it from appearing again in future randomizations
+    // After the user has chosen correctly the card is removed 
+    // from the array and will not appear again.
     defeatedElements.push(randomElement);
 }
 
