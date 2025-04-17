@@ -13,7 +13,7 @@ let randomElement = "";  // array to store random element
 let userChoice = ""; //
 let gameStart = false; // if the game is running or not
 let selectElement;
-let countdown = 30; // Countdown timer.
+let countDown = 30; // Countdown timer.
 let timerInterval;
 let selectedElements = []; // Store selected elements.
 let correctSelections = 0; // Count correct selections.
@@ -43,12 +43,12 @@ function startGameEasy() {
     // Start the random monster generator with an interval of 3 seconds
     selectElement = setInterval(randomizeElement, 3000);
 
-    // 60 Second countdown timer
-    countdown = 60;
+    // 60 Second countDown timer
+    countDown = 60;
     document.getElementById("timer").innerText =
-        `Time Remaining: ${countdown}s`;
+        `Time Remaining: ${countDown}s`;
 
-    // Delay starting the countdown for 3 seconds when the game board opens
+    // Delay starting the countDown for 3 seconds when the game board opens
     setTimeout(function() {
         timerInterval = setInterval(updateTimer, 1000);
     }, 3000);
@@ -69,12 +69,12 @@ function startGameMedium() {
     // Start the random monster generator with an interval of 3 seconds
     selectElement = setInterval(randomizeElement, 3000);
 
-    // 45 Second countdown timer
-    countdown = 45;
+    // 45 Second countDown timer
+    countDown = 45;
     document.getElementById("timer").innerText =
-        `Time Remaining: ${countdown}s`;
+        `Time Remaining: ${countDown}s`;
 
-    // Delay starting the countdown for 3 seconds when the game board opens
+    // Delay starting the countDown for 3 seconds when the game board opens
     setTimeout(function() {
         timerInterval = setInterval(updateTimer, 1000);
     }, 3000);
@@ -95,28 +95,28 @@ function startGameHard() {
     // Start the random monster generator with an interval of 2 seconds
     selectElement = setInterval(randomizeElement, 2000);
 
-    // 30 Second countdown timer
-    countdown = 30;
+    // 30 Second countDown timer
+    countDown = 30;
     document.getElementById("timer").innerText =
-        `Time Remaining: ${countdown}s`;
+        `Time Remaining: ${countDown}s`;
 
-    // Delay starting the countdown for 3 seconds when the game board opens
+    // Delay starting the countDown for 3 seconds when the game board opens
     setTimeout(function() {
         timerInterval = setInterval(updateTimer, 1000);
     }, 3000);
 }
 
 function updateTimer() {
-    if (timeLeft <= 0) {
+    if (countDown <= 0) {
         clearInterval(timerInterval); // Stop the timer when it reaches 0
         evaluateGame(); // Evaluate the game when time is up
         document.getElementById("result").innerText =
             "Time's up!";
     } else {
-        countdown = countdown - 1;
-        Math.floor(countdown);
+        countDown = countDown - 1;
+        Math.floor(countDown);
         document.getElementById("timer").innerText =
-            `Time Remaining: ${countdown}s`;
+            `Time Remaining: ${countDown}s`;
     }
 }
 
@@ -202,7 +202,7 @@ function evaluateGame(Win) {
     // Stop the random element interval after user makes a choice
     clearInterval(selectElement);
 
-    // Stop the countdown timer
+    // Stop the countDown timer
     clearInterval(timerInterval);
     // Display the result based on whether the user won or lost
     if (Win) {
