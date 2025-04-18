@@ -15,7 +15,7 @@ let gameStart = false; // if the game is running or not
 let selectElement;
 let countDown = 30; // Countdown timer.
 let timerInterval;
-let selectedElements = []; // Store selected elements.
+let selectedElements = []; // Store clicked on elements.
 let correctSelections = 0; // Count correct selections.
 let defeatedCount = 0; // Track the number of defeated random elements.
 let defeatedElements = []; // Track the defeated random elements.
@@ -154,7 +154,7 @@ function randomizeElement() {
         randomElement;
 }
 
-function handleUserChoice(element) {
+function userChoice(element) {
     // Removes the chosen element card from the list
     if (!gameStart ||
         selectedElements.includes(element)) { return; }
@@ -163,7 +163,8 @@ function handleUserChoice(element) {
         document.querySelector(`.element-card[data-element="${element}"]`);
     // Rotates card so its hidden
     card.style.transform = "rotateY(90deg) rotateX(90deg)";
-    card.style.pointerEvents = "none"; // Disable further interaction
+    // Disable further interaction
+    card.style.pointerEvents = "none";
 
     // Store selected element into the element array
     selectedElements.push(element);
