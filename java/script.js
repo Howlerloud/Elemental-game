@@ -158,7 +158,7 @@ function handleUserChoice(element) {
     // Removes the chosen element card from the list
     if (!gameStart ||
         selectedElements.includes(element)) { return; }
-    // Flips the card and disables it from play
+    //disables the card
     const card =
         document.querySelector(`.element-card[data-element="${element}"]`);
     // Rotates card so its hidden
