@@ -158,7 +158,7 @@ function userChoice(element) {
     // Removes the chosen element card from the list
     if (!gameStart ||
         selectedElements.includes(element)) { return; }
-    //disables the card
+    //targets the selected elemental card and stores it
     const card =
         document.querySelector(`.element-card[data-element="${element}"]`);
     // Rotates card so its hidden
@@ -166,7 +166,7 @@ function userChoice(element) {
     // Disable further interaction
     card.style.pointerEvents = "none";
 
-    // Store selected element into the element array
+    // Store selected element into the selectedElements array
     selectedElements.push(element);
 
     // Check if the player has chosen correctly
