@@ -27,7 +27,7 @@ body {
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
-    background-color: #065210;
+    background-color: #0049e6;
     color: white;
     border: none;
     border-radius: 5px;
@@ -38,14 +38,14 @@ button  {
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
-    background-color: #065210;
+    background-color: #0a40a3;
     color: white;
     border: none;
     border-radius: 5px;
 }
 
 button:hover {
-    background-color: #45a049;
+    background-color: #3c2e77;
 }
 
 .instructions {
