@@ -10,8 +10,10 @@ w
 <h2>User Stories</h2>
 <ol>
   <li>As a first time user I want a clear and easy way to start the game.<br>The game shows a start button on the front of the page followed by a choice of 3 difficulty buttons</li>
-  <li>As a first time user I want to see how to beat the game.<br>On the front page of the game a clearn image shows what each element counters and what they get countered by.</li>
+  <li>As a first time user I want to see how to beat the game.<br>On the front page of the game a clear image shows what each element counters and what they get countered by and a instructions popup.</li>
   <li>As a first time user I want to know when I have won or lost the game.<br>After beating all 6 enemys the game comes up with a display showing I have beaten the dungeon. If I am defeated the game notifies me that I have been overrun.</li>
+  <li>As a user I want the game to vary with difficulty giving me a reason to come back and improve. I can clearly see when I start the game there is 3 difficultys to choose from that decrease the timer and increase the monster interval speed.</li>
+  <li>As a user I want to be able to keep track of my wins. There is a win counter displayed at the top of the screen for me to keep track of my win streak.</li>
 </ol>
 <h2>Future Improvements</h2>
 <ul>
@@ -22,6 +24,12 @@ w
 <h1>Design</h1>
 <h2>Wireframes</h2>
 <p>Below are the wireframes created for this project to give a good guide on how the finished product will look</p>
+<img src="assets/readme/menu-desktop.jpg">
+<img src="assets/readme/menu-mobile.jpg">
+<img src="assets/readme/game-desktop.jpg">
+<img src="assets/readme/game-mobile.jpg">
+<img src="assets/readme/difficulty.jpg">
+<img src="assets/readme/difficulty-mobile.jpg">
 <h1>Features</h1>
 <p>The gameboard shows a list of 6 elemental monsters that the user has control over and must use them to defeat the monsters in the dungeon</p>
 
@@ -41,3 +49,11 @@ w
 <h3>Java Script</h3>
 
 <h2>User Stories Testing</h2>
+
+<h2>Credits</h2>
+<ul>
+  <li>https://www.w3schools.com/js/js_htmldom_css.asp helping with styling of text using js.</li>
+  <li>W3 Schools helped with alot of js structure.</li>
+  <li>Media for monsters. - https://finalfantasy.fandom.com/wiki/Final_Fantasy_XI_enemies </li>
+  <li>Bro Code to help with js.</li>
+</ul>
