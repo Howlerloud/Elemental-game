@@ -37,7 +37,6 @@ function startGameEasy() {
     document.getElementById("easy").style.display = "none";
     document.getElementById("medium").style.display = "none";
     document.getElementById("hard").style.display = "none";
-
     // Set game state to started
     gameStart = true;
 

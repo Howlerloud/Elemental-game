@@ -27,11 +27,22 @@ body {
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
-    background-color: #0049e6;
     color: white;
     border: none;
     border-radius: 5px;
     display: none;
+}
+
+#easy:hover {
+    background-color: #4CAF50;
+}
+
+#medium:hover {
+    background-color: orange;
+}
+
+#hard:hover {
+    background-color: red;
 }
 
 button  {
