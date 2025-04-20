@@ -210,12 +210,14 @@ function evaluateGame(Win) {
     clearInterval(timerInterval);
     // Display the result based on whether the user won or lost and adds 1 to the win streak score
     if (Win) {
+        resultElement.style.color = "rgb(106, 253, 143)";
         resultElement.innerText =
             "You Win! You defeated all the Monsters in the dungeon!";
             score ++;
             playerScore.innerText =
             `${score}`;
     } else {
+        resultElement.style.color = "red";
         resultElement.innerText =
             "You have been defeated by the Monsters!";
     }
