@@ -19,6 +19,7 @@ let selectedElements = []; // Store clicked on elements.
 let correctSelections = 0; // Count correct selections.
 let defeatedCount = 0; // Track the number of defeated random elements.
 let defeatedElements = []; // Track the defeated random elements.
+let score = 0; // counts wins
 
 function difficulty() {
     // Hide the start button, counters and displays the difficulty choices.
@@ -199,16 +200,21 @@ function defeatRandomMonster() {
 function evaluateGame(Win) {
     const resultElement =
         document.getElementById("result");
+    const playerScore =
+        document.getElementById("playerScore");
 
     // Stop the random element interval after user makes a choice
     clearInterval(selectElement);
 
     // Stop the countDown timer
     clearInterval(timerInterval);
-    // Display the result based on whether the user won or lost
+    // Display the result based on whether the user won or lost and adds 1 to the win streak score
     if (Win) {
         resultElement.innerText =
             "You Win! You defeated all the Monsters in the dungeon!";
+            score ++;
+            playerScore.innerText =
+            `${score}`;
     } else {
         resultElement.innerText =
             "You have been defeated by the Monsters!";
@@ -279,3 +285,4 @@ function manual() {
                only get a few seconds to react`
       );
 }
+
