@@ -35,7 +35,9 @@ w
 
 <p>When a monster card is clicked it will either end the game telling the user they have been defeated if they picked incorrectly or flip and not be usable again if the user is correct.</p>
 
-<p>A choice of Easy, Medium or hard mode are given to the user to vary the difficulty of the game</p>
+<p>A choice of Easy, Medium or hard mode are given to the user to vary the difficulty of the game.</p>
+
+<p>A score counter at the top showing the user how many wins they have accrued.</p>
 <h1>Testing</h1>
 <h2>Automated Testing</h2>
 <p>Automated Testing is the use of external software to check for errors in the code and to highlight them to be addressed<p>
@@ -47,7 +49,10 @@ w
 <h3>CSS</h3>
 
 <h3>Java Script</h3>
-
+<ul>
+  <li>I used ES lint to validate my JS code. ES lint highlighted errors in my code and allowed me to find better ways to write the syntax. The code now contains no errors but does flag 6 variables that are defined but not used, this happends because the variables are used in the html and ES lint doesnt read html so it just flags as unused. </li>
+</ul>
+<img src="assets/readme/js.jpg">
 <h2>User Stories Testing</h2>
 
 <h2>Credits</h2>
