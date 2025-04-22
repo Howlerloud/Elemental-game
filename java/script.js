@@ -212,6 +212,7 @@ function evaluateGame(Win) {
         resultElement.style.color = "rgb(106, 253, 143)";
         resultElement.innerText =
             "You Win! You defeated all the Monsters in the dungeon!";
+            // Increases score
             score ++;
             playerScore.innerText =
             `${score}`;
@@ -219,6 +220,9 @@ function evaluateGame(Win) {
         resultElement.style.color = "red";
         resultElement.innerText =
             "You have been defeated by the Monsters!";
+            score = 0;
+            playerScore.innerText =
+            `${score}`;
     }
 
     // Disable the game
