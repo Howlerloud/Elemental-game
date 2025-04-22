@@ -26,7 +26,7 @@ A game where the user has to face off against the machine by using elements to c
 <h2>Colour Palette</h2>
 <img src="assets/readme/palette.jpg">
 <p><a href="https://coolors.co/">Coolers was used to generate the colour scheme.</a></p>
-<p>A dark theme was chones to enchance the feeling of being in the dungeon adding to the user experience.</p>
+<p>A dark theme was chosen to enhance the feeling of being in the dungeon adding to the user experience.</p>
 <h2>Wireframes</h2>
 <p>Below are the wireframes created for this project to give a good guide on how the finished product will look</p>
 <hr>
@@ -36,10 +36,10 @@ A game where the user has to face off against the machine by using elements to c
 <h3>The main menu showcased on a mobile device</h3>
 <img src="assets/readme/menu-mobile.jpg">
 <hr>
-<h3>The gameboard shown on a desktop</h3>
+<h3>The game board shown on a desktop</h3>
 <img src="assets/readme/game-desktop.jpg">
 <hr>
-<h3>The gameboard shown on a mobile device</h3>
+<h3>The game board shown on a mobile device</h3>
 <img src="assets/readme/game-mobile.jpg">
 <hr>
 <h3>The difficulty menu as shown on a desktop</h3>
@@ -62,12 +62,12 @@ A game where the user has to face off against the machine by using elements to c
 <p>Automated Testing is the use of external software to check for errors in the code and to highlight them to be addressed.<p>
 <h2>Manual Testing</h2>
 <p>Manual Testing is the user/programmer checking code visually and comparing it to the results of the visual product. Check if buttons/links work, making sure code it outputting the correct response.</p>
-<h3>When manualy testing these bugs appeared in my project</h3>
+<h3>When manually testing these bugs appeared in my project</h3>
 <ol>
-  <li>When scaling the website for mobile the random element card started to overlap the rest of the gameboard causing collisions with the players card hand. Css was addressed to be the issue and the random element was given its own div to be targeted and allowed for better spacing.</li>
-  <li>When a game end the counters picture on the main menu would dissapear. This turned out to be an issue with the java script as the image was missed out when displaying the menu after a game. To fix this 
+  <li>When scaling the website for mobile the random element card started to overlap the rest of the game board causing collisions with the players card hand. Css was addressed to be the issue and the random element was given its own div to be targeted and allowed for better spacing.</li>
+  <li>When a game end the counters picture on the main menu would disappear. This turned out to be an issue with the java script as the image was missed out when displaying the menu after a game. To fix this 
     "document.getElementById('element-counters').style.display = 'inline-block';" was added to make the counters image appear after the timer has hit 0 or the player has won/lost.</li>
-  <li>Timer started to display as ${countdown} this was due to a change in the colons being used that caused the template litral to become a string.</li>
+  <li>Timer started to display as ${countdown} this was due to a change in the colons being used that caused the template literal to become a string.</li>
   <li>The count down timer would start to countdown quicker as time passed. This was due to a nested setInterval inside another setInterval which was constantly being called causing the timer to speed up every second.</li>
   <li>When winning or losing the start button would flicker on the screen no matter what part of the game you were on. This was due to another setInterval the kept calling the menu. It was changed to a setTimeout to stop the function from being called constantly.</li>
 </ol>
@@ -76,7 +76,7 @@ A game where the user has to face off against the machine by using elements to c
 <h2>Validator Testing</h2>
 
 <h3>Html</h3>
-<p>W3C markup was used to validate my html and as shown it passed, it only addresses an empty heading that is filled when certain perameters are met on js.</p>
+<p>W3C markup was used to validate my html and as shown it passed, it only addresses an empty heading that is filled when certain parameters are met on js.</p>
 <img src="assets/readme/html.jpg">
 <h3>CSS</h3>
 <p>W3 Jigsaw was used to check the css used in my project and has passed with no issues.</p>
