@@ -281,13 +281,13 @@ function resetGame() {
 function manual() {
     Swal.fire(
          "How to play",
-         `There are 6 known monsters down in the dungeon
+         `There are 7 known monsters down in the dungeon
           and we have given you the needed summoning magic
-           to fend off these beasts. All 6 monsters are weak
+           to fend off these beasts. 6 of these monsters are weak
             to 1 element type for example fire is put out by
              water and thunder can decimate water but be quick
               the monsters will quickly attack and run so you
-               only get a few seconds to react`
+               only get a few seconds to react. And Never Forget, Bomb Beats All!`
       );
 }
 
