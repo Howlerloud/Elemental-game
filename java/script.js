@@ -256,8 +256,8 @@ function evaluateGame(Win) {
 
 function resetGame() {
     // Reset selected elements and correct selections
-    selectedElements = [];
-    correctSelections = 0;
+    selectedElements = []; //removed elements from array
+    correctSelections = 0; //Reest correct elements count
     defeatedCount = 0; // Reset defeated elements count
     defeatedElements = []; // Reset defeated elements list
 
