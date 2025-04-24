@@ -9,11 +9,11 @@ A game where the user has to face off against the machine by using elements to c
 </ul>
 <h2>User Stories</h2>
 <ol>
-  <li>As a first time user I want a clear and easy way to start the game.<br>The game shows a start button on the front of the page followed by a choice of 3 difficulty buttons</li>
-  <li>As a first time user I want to see how to beat the game.<br>On the front page of the game a clear image shows what each element counters and what they get countered by and a instructions popup.</li>
-  <li>As a first time user I want to know when I have won or lost the game.<br>After beating all 6 enemy's the game comes up with a display showing I have beaten the dungeon. If I am defeated the game notifies me that I have been overrun.</li>
-  <li>As a user I want the game to vary with difficulty giving me a reason to come back and improve. I can clearly see when I start the game there is 3 difficulty's to choose from that decrease the timer and increase the monster interval speed.</li>
-  <li>As a user I want to be able to keep track of my wins. There is a win counter displayed at the top of the screen for me to keep track of my win streak.</li>
+  <li>As a first time user I want a clear and easy way to start the game.<br>This will be done when a clear start button is shown.</li>
+  <li>As a first time user I want to see how to beat the game.<br>A description of the game and how to play it would help.</li>
+  <li>As a first time user I want to know when I have won or lost the game.<br>A response at the end of the game so I know I have beaten it.</li>
+  <li>As a user I want the game to vary with difficulty giving me a reason to come back and improve.<br> A selection of buttons or something to display that the difficulty is getting harder.</li>
+  <li>As a user I want to be able to keep track of my wins.<br> A win counter that is clearly visible for me to keep track.</li>
 </ol>
 <h2>Future Improvements</h2>
 <ul>
@@ -52,14 +52,12 @@ A game where the user has to face off against the machine by using elements to c
 <p>A choice of Easy, Medium or hard mode are given to the user to vary the difficulty of the game.</p>
 
 <p>The game board shows a list of 6 elemental monsters that the user has control over and must use them to defeat the monsters in the dungeon</p>
-
+<img src="assets/readme/game-board.jpg">
 <p>When a monster card is clicked it will either end the game telling the user they have been defeated if they picked incorrectly or flip and not be usable again if the user is correct.</p>
 
 <p>A score counter at the top showing the user how many wins they have accrued and will reset if they lose a match.</p>
 
 <h1>Testing</h1>
-<h2>Automated Testing</h2>
-<p>Automated Testing is the use of external software to check for errors in the code and to highlight them to be addressed.<p>
 <h2>Manual Testing</h2>
 <p>Manual Testing is the user/programmer checking code visually and comparing it to the results of the visual product. Check if buttons/links work, making sure code it outputting the correct response.</p>
 <h3>When manually testing these bugs appeared in my project</h3>
@@ -71,10 +69,9 @@ A game where the user has to face off against the machine by using elements to c
   <li>The count down timer would start to countdown quicker as time passed. This was due to a nested setInterval inside another setInterval which was constantly being called causing the timer to speed up every second.</li>
   <li>When winning or losing the start button would flicker on the screen no matter what part of the game you were on. This was due to another setInterval the kept calling the menu. It was changed to a setTimeout to stop the function from being called constantly.</li>
 </ol>
-<h3>
   <p>Currently there is only one thing i would like to change and that is the game will sometimes make the same random element appear more that once in a row. This would make the user think the game has bugged/stopped but in fact it has just rolled the same random element multiple times. I would like to make it so the current element is not part of the array when its in play.</p>
-<h2>Validator Testing</h2>
-
+<h2>Automated Testing</h2>
+<p>Automated Testing is the use of external software to check for errors in the code and to highlight them to be addressed.<p>
 <h3>Html</h3>
 <p>W3C markup was used to validate my html and as shown it passed, it only addresses an empty heading that is filled when certain parameters are met on js.</p>
 <img src="assets/readme/html.jpg">
@@ -87,6 +84,18 @@ A game where the user has to face off against the machine by using elements to c
 </ul>
 <img src="assets/readme/js.jpg">
 <h2>User Stories Testing</h2>
+  <ol>
+  <li>As a first time user I want a clear and easy way to start the game.<br>The game shows a start button on the front of the page followed by a choice of 3 difficulty buttons</li>
+    <img src="assets/readme/html.jpg">
+  <li>As a first time user I want to see how to beat the game.<br>On the front page of the game a clear image shows what each element counters and what they get countered by and a instructions popup.</li>
+    <img src="assets/readme/html.jpg">
+  <li>As a first time user I want to know when I have won or lost the game.<br>After beating all 6 enemy's the game comes up with a display showing I have beaten the dungeon. If I am defeated the game notifies me that I have been overrun.</li>
+    <img src="assets/readme/html.jpg">
+  <li>As a user I want the game to vary with difficulty giving me a reason to come back and improve.<br> I can clearly see when I start the game there is 3 difficulty's to choose from that decrease the timer and increase the monster interval speed.</li>
+    <img src="assets/readme/html.jpg">
+  <li>As a user I want to be able to keep track of my wins.<br> There is a win counter displayed at the top of the screen for me to keep track of my win streak.</li>
+    <img src="assets/readme/html.jpg">
+</ol>
 <h2>Future additions</h2>
 <ul>
   <li>A secret level that appears after 5 consecutive wins that changes the monsters image to something new and jumbles up the element type wording so fire will look something like "RFIE" to throw the user off.</li>
