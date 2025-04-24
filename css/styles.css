@@ -23,6 +23,7 @@ body {
     bottom: 1rem;
 }
 
+/* Styles for the difficulty buttons */
 #easy, #medium, #hard {
     padding: 10px 20px;
     font-size: 16px;
@@ -33,6 +34,7 @@ body {
     display: none;
 }
 
+/* Individual styling for each button to change colour on hover*/
 #easy:hover {
     background-color: #4CAF50;
 }

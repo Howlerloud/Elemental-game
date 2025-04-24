@@ -291,3 +291,10 @@ function manual() {
       );
 }
 
+function redirect() {
+    setTimeout(myURL, 10000)
+}
+
+function myURL () {
+    document.location.href = "https://howlerloud.github.io/Elemental-game/";
+}
