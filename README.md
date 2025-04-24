@@ -60,6 +60,18 @@ A game where the user has to face off against the machine by using elements to c
 <h1>Testing</h1>
 <h2>Manual Testing</h2>
 <p>Manual Testing is the user/programmer checking code visually and comparing it to the results of the visual product. Check if buttons/links work, making sure code it outputting the correct response.</p>
+<h3>When manualy testing the following was found</h3>
+<ul>
+  <li>All buttons work and execute the correct functions.</li>
+  <li>I have tested the Sweet alert popup and it works correctly with the correct styling.</li>
+  <li>I have tested the page in multiple resolutions and works for pc, ipad and mobile.</li>
+  <li>All cards when clicked operate correctly and flip when interacted with.</li>
+  <li>When directed to the wrong page the custom 404 page appears and after 10 seconds redirects the user to the main game page.</li>
+  <li>The game works both when winning and losing resetting the game and sending the user back to the main menu.</li>
+  <li>The timer counts down correctly and ends the game after the aloted time.</li>
+  <li>The win counter works correctly by counting up by 1 when winning and resetting to 0 when defeated.</li>
+  <li>All reactive css works when hoving over buttons.</li>
+</ul>
 <h3>When manually testing these bugs appeared in my project</h3>
 <ol>
   <li>When scaling the website for mobile the random element card started to overlap the rest of the game board causing collisions with the players card hand. Css was addressed to be the issue and the random element was given its own div to be targeted and allowed for better spacing.</li>
@@ -78,6 +90,9 @@ A game where the user has to face off against the machine by using elements to c
 <h3>CSS</h3>
 <p>W3 Jigsaw was used to check the css used in my project and has passed with no issues.</p>
 <img src="assets/readme/css.jpg">
+<h3>Lighthouse</h3>
+<p>Lighthouse was used to test the load times, accessability and practices.</p>
+<img src="assets/readme/lighthouse.jpg">
 <h3>Java Script</h3>
 <ul>
   <li>I used ES lint to validate my JS code. ES lint highlighted errors in my code and allowed me to find better ways to write the syntax. The code now contains no errors but does flag 6 variables that are defined but not used, this happens because the variables are used in the html and ES lint doesn't read html so it just flags as unused. </li>
@@ -86,26 +101,44 @@ A game where the user has to face off against the machine by using elements to c
 <h2>User Stories Testing</h2>
   <ol>
   <li>As a first time user I want a clear and easy way to start the game.<br>The game shows a start button on the front of the page followed by a choice of 3 difficulty buttons</li>
-    <img src="assets/readme/html.jpg">
+    <img src="assets/readme/start.jpg">
   <li>As a first time user I want to see how to beat the game.<br>On the front page of the game a clear image shows what each element counters and what they get countered by and a instructions popup.</li>
-    <img src="assets/readme/html.jpg">
+    <img src="assets/readme/instructions.jpg">
   <li>As a first time user I want to know when I have won or lost the game.<br>After beating all 6 enemy's the game comes up with a display showing I have beaten the dungeon. If I am defeated the game notifies me that I have been overrun.</li>
-    <img src="assets/readme/html.jpg">
+    <img src="assets/readme/defeat.jpg">
   <li>As a user I want the game to vary with difficulty giving me a reason to come back and improve.<br> I can clearly see when I start the game there is 3 difficulty's to choose from that decrease the timer and increase the monster interval speed.</li>
-    <img src="assets/readme/html.jpg">
+    <img src="assets/readme/difficulty-choice.jpg">
   <li>As a user I want to be able to keep track of my wins.<br> There is a win counter displayed at the top of the screen for me to keep track of my win streak.</li>
-    <img src="assets/readme/html.jpg">
+    <img src="assets/readme/win-counter.jpg">
 </ol>
 <h2>Future additions</h2>
 <ul>
   <li>A secret level that appears after 5 consecutive wins that changes the monsters image to something new and jumbles up the element type wording so fire will look something like "RFIE" to throw the user off.</li>
   <li>A economy system with a shop after each win allowing the player to change the way the game is played for example "Boots of swiftness: Once used the player will retreat from the dungeon, keeping their win count but the boots will be destroyed."</li>
 </ul>
+<h3>How to Fork</h4>
+<p>To fork the Essex Pc's repository:</p>
+<ol>
+  <li>Log in (or sign up) to Github.</li>
+  <li>Go to the repository for this project, HTTPS://github.com/Howlerloud/Essex-Pc-s.</li>
+  <li>Click the Fork button in the top right corner.</li>
+  </ol>
+<h3>How to Clone</h4>
+<p>To clone the Essex-Pc-s repository:</p>
+<ol>
+  <li>Log in (or sign up) to GitHub.</li>
+  <li>Go to the repository for this project, HTTPS://github.com/Howlerloud/Essex-Pc-s.</li>
+  <li>Click on the code button, select whether you would like to clone with HTTPS, SSH or GitHub CLI and copy the link shown.</li>
+  <li>Open the terminal in your code editor and change the current working directory to the location you want to use for the cloned directory.</li>
+  <li>Type 'git clone' into the terminal and then paste the link you copied in step 3. Press enter.</li>
+</ol>
 <h2>Credits</h2>
 <ul>
   <li>https://www.w3schools.com/js/js_htmldom_css.asp helping with styling of text using js.</li>
   <li>W3 Schools helped with a lot of js structure.</li>
   <li>Media for monsters. - https://finalfantasy.fandom.com/wiki/Final_Fantasy_XI_enemies </li>
   <li>Bro Code to help with js.</li>
+  <li>https://www.tutorialspoint.com/How-to-use-JavaScript-to-redirect-a-webpage-after-5-seconds & https://www.tutorialspoint.com/How-do-I-call-a-JavaScript-function-on-page-load#:~:text=By%20using%20the%20window.,executed%20after%20the%20page%20load - To build the function that controlls the 404 redirect</li>
+  <li>Images used - https://finalfantasy.fandom.com/wiki/Final_Fantasy_XI_enemies</li>
 </ul>
 
