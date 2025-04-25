@@ -10,6 +10,7 @@
 </head>
 
 <body>
+  <!--Main menu with game instructions-->
   <div id="game-container">
     <h1>Into The Vortex</h1>
     <button id="start-button" onclick="difficulty()">Start Game</button>
@@ -19,15 +20,18 @@
       <h2 id="playerScore">0</h2>
     </div>
     <div>
+      <!-- Difficulty buttons-->
       <div>
         <button id="easy" onclick="startGameEasy()">Easy Mode</button>
         <button id="medium" onclick="startGameMedium()">Time is your enemy</button>
         <button id="hard" onclick="startGameHard()">Here comes the onslaught</button>
       </div>
+      <!-- Main game board -->
       <div id="game-board" style="display: none;">
         <h2>Choose Your Elemental Monster!</h2>
         <h3 id="timer">Time Remaining: 30s</h3>
         <div class="elements-container">
+          <!-- Game elemental cards-->
           <div class="element-card" data-element="Fire" onclick="userChoice('Fire')">
             <img src="assets/images/fire.webp" alt="Fire">
             <p>Fire</p>
