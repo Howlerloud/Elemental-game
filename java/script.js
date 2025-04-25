@@ -196,7 +196,7 @@ function defeatRandomMonster() {
     defeatedElements.push(randomElement);
 }
 
-function evaluateGame(Win) {
+function evaluateGame(win) {
     const resultElement =
         document.getElementById("result");
     const playerScore =
@@ -208,7 +208,7 @@ function evaluateGame(Win) {
     // Stop the countDown timer
     clearInterval(timerInterval);
     // Display the result based on whether the user won or lost and adds 1 to the win streak score
-    if (Win) {
+    if (win) {
         resultElement.style.color = "rgb(106, 253, 143)";
         resultElement.innerText =
             "You Win! You defeated all the Monsters in the dungeon!";
