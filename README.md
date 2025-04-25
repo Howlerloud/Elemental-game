@@ -71,6 +71,7 @@ A game where the user has to face off against the machine by using elements to c
   <li>The timer counts down correctly and ends the game after the aloted time.</li>
   <li>The win counter works correctly by counting up by 1 when winning and resetting to 0 when defeated.</li>
   <li>All reactive css works when hoving over buttons.</li>
+  <li>Allowed the timer to hit 0 and reset the game, after a set period of the time game closes and opens up the main menu.</li>
 </ul>
 <h3>When manually testing these bugs appeared in my project</h3>
 <ol>
