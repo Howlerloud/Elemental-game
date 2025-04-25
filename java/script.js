@@ -274,7 +274,7 @@ function resetGame() {
     const randomElementDisplay =
         document.getElementById("random-element");
     randomElementDisplay.querySelector("img").src =
-        "assets/Bomb.webp"; // Reset to the original random element image
+        "assets/images/bomb.webp"; // Reset to the original random element image
     randomElementDisplay.querySelector("p").innerText = ""; // Reset text
 }
 
