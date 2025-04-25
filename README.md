@@ -60,7 +60,7 @@ A game where the user has to face off against the machine by using elements to c
 <h1>Testing</h1>
 <h2>Manual Testing</h2>
 <p>Manual Testing is the user/programmer checking code visually and comparing it to the results of the visual product. Check if buttons/links work, making sure code it outputting the correct response.</p>
-<h3>When manualy testing the following was found</h3>
+<h3>When manually testing the following was found</h3>
 <ul>
   <li>All buttons work and execute the correct functions.</li>
   <li>I have tested the Sweet alert popup and it works correctly with the correct styling.</li>
@@ -68,9 +68,9 @@ A game where the user has to face off against the machine by using elements to c
   <li>All cards when clicked operate correctly and flip when interacted with.</li>
   <li>When directed to the wrong page the custom 404 page appears and after 10 seconds redirects the user to the main game page.</li>
   <li>The game works both when winning and losing resetting the game and sending the user back to the main menu.</li>
-  <li>The timer counts down correctly and ends the game after the aloted time.</li>
+  <li>The timer counts down correctly and ends the game after the allotted time.</li>
   <li>The win counter works correctly by counting up by 1 when winning and resetting to 0 when defeated.</li>
-  <li>All reactive css works when hoving over buttons.</li>
+  <li>All reactive css works when hovering over buttons.</li>
 </ul>
 <h3>When manually testing these bugs appeared in my project</h3>
 <ol>
@@ -138,7 +138,7 @@ A game where the user has to face off against the machine by using elements to c
   <li>W3 Schools helped with a lot of js structure.</li>
   <li>Media for monsters. - https://finalfantasy.fandom.com/wiki/Final_Fantasy_XI_enemies </li>
   <li>Bro Code to help with js.</li>
-  <li>https://www.tutorialspoint.com/How-to-use-JavaScript-to-redirect-a-webpage-after-5-seconds & https://www.tutorialspoint.com/How-do-I-call-a-JavaScript-function-on-page-load#:~:text=By%20using%20the%20window.,executed%20after%20the%20page%20load - To build the function that controlls the 404 redirect</li>
+  <li>https://www.tutorialspoint.com/How-to-use-JavaScript-to-redirect-a-webpage-after-5-seconds & https://www.tutorialspoint.com/How-do-I-call-a-JavaScript-function-on-page-load#:~:text=By%20using%20the%20window.,executed%20after%20the%20page%20load - To build the function that controls the 404 redirect</li>
   <li>Images used - https://finalfantasy.fandom.com/wiki/Final_Fantasy_XI_enemies</li>
 </ul>
 
