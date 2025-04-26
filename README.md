@@ -15,12 +15,6 @@ A game where the user has to face off against the machine by using elements to c
   <li>As a user I want the game to vary with difficulty giving me a reason to come back and improve.<br> A selection of buttons or something to display that the difficulty is getting harder.</li>
   <li>As a user I want to be able to keep track of my wins.<br> A win counter that is clearly visible for me to keep track.</li>
 </ol>
-<h2>Future Improvements</h2>
-<ul>
-  <li>Adding Light and Dark elements to the game on hard mode</li>
-  <li>On easy mode give the user 2 lives with each element so they don't lose on first pick</li>
-  <li>A win streak counter to track the users wins and add secret level after 10 wins</li>
-</ul>
 <h1>Design</h1>
 <p>The font Arial Sans Serif was used due to its great readability, modern aesthetic and accessibility</p>
 <h2>Colour Palette</h2>
@@ -116,6 +110,8 @@ A game where the user has to face off against the machine by using elements to c
 <ul>
   <li>A secret level that appears after 5 consecutive wins that changes the monsters image to something new and jumbles up the element type wording so fire will look something like "RFIE" to throw the user off.</li>
   <li>A economy system with a shop after each win allowing the player to change the way the game is played for example "Boots of swiftness: Once used the player will retreat from the dungeon, keeping their win count but the boots will be destroyed."</li>
+    <li>Adding Light and Dark elements to the game on hard mode.</li>
+  <li>On easy mode give the user 2 lives with each element so they don't lose on first pick.</li>
 </ul>
 <h3>How to Fork</h4>
 <p>To fork the Essex Pc's repository:</p>
