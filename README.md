@@ -70,11 +70,11 @@ A game where the user has to face off against the machine by using elements to c
 <h3>When manually testing these bugs appeared in my project</h3>
 <ol>
   <li>When scaling the website for mobile the random element card started to overlap the rest of the game board causing collisions with the players card hand. Css was addressed to be the issue and the random element was given its own div to be targeted and allowed for better spacing.</li>
-  <li>When a game end the counters picture on the main menu would disappear. This turned out to be an issue with the java script as the image was missed out when displaying the menu after a game. To fix this 
+  <li>When a game ends the counters picture on the main menu would disappear. This turned out to be an issue with the java script as the image was missed out when displaying the menu after a game. To fix this 
     "document.getElementById('element-counters').style.display = 'inline-block';" was added to make the counters image appear after the timer has hit 0 or the player has won/lost.</li>
   <li>Timer started to display as ${countdown} this was due to a change in the colons being used that caused the template literal to become a string.</li>
   <li>The count down timer would start to countdown quicker as time passed. This was due to a nested setInterval inside another setInterval which was constantly being called causing the timer to speed up every second.</li>
-  <li>When winning or losing the start button would flicker on the screen no matter what part of the game you were on. This was due to another setInterval the kept calling the menu. It was changed to a setTimeout to stop the function from being called constantly.</li>
+  <li>When winning or losing the start button would flicker on the screen no matter what part of the game you were on. This was due to another setInterval that kept calling the menu. It was changed to a setTimeout to stop the function from being called constantly.</li>
 </ol>
   <p>Currently there is only one thing i would like to change and that is the game will sometimes make the same random element appear more that once in a row. This would make the user think the game has bugged/stopped but in fact it has just rolled the same random element multiple times. I would like to make it so the current element is not part of the array when its in play.</p>
 <h2>Automated Testing</h2>
@@ -86,7 +86,7 @@ A game where the user has to face off against the machine by using elements to c
 <p>W3 Jigsaw was used to check the css used in my project and has passed with no issues.</p>
 <img src="assets/readme/css.jpg">
 <h3>Lighthouse</h3>
-<p>Lighthouse was used to test the load times, accessability and practices.</p>
+<p>Lighthouse was used to test the load times, accessibility and practices.</p>
 <img src="assets/readme/lighthouse.jpg">
 <h3>Java Script</h3>
 <ul>
