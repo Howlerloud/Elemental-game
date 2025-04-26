@@ -53,7 +53,7 @@ A game where the user has to face off against the machine by using elements to c
 
 <h1>Testing</h1>
 <h2>Manual Testing</h2>
-<p>Manual Testing is the user/programmer checking code visually and comparing it to the results of the visual product. Check if buttons/links work, making sure code it outputting the correct response.</p>
+<p>Manual Testing is the user/programmer checking code visually and comparing it to the results of the visual product. Check if buttons/links work, making sure code is outputting the correct response.</p>
 <h3>When manually testing the following was found</h3>
 <ul>
   <li>All buttons work and execute the correct functions.</li>
